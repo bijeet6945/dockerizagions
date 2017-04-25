@@ -18,8 +18,6 @@ RUN apt-get -y install tomcat7
 
 RUN service tomcat7 start
 
-EXPOSE 3306
-
 # Change default port
 
 #ADD server.xml /tmp/server.xml
