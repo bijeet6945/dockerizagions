@@ -9,6 +9,7 @@ RUN sudo apt-get -y install python-software-properties
 RUN sudo add-apt-repository -y ppa:webupd8team/java
 RUN sudo apt-get -y update
 RUN sudo apt-get -y install oracle-java8-installer
+RUN sudo apt install oracle-java8-set-default
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
