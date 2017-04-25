@@ -1,1 +1,28 @@
 FROM ubuntu:14.04
+
+RUN sudo apt-get update
+
+#Install java
+
+RUN apt-get -y install python-software-properties
+RUN add-apt-repository ppa:webupd8team/java
+RUN apt-get -y update
+RUN apt-get -y install oracle-java8-installer
+
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+# Install Tomcat
+
+RUN apt-get -y install tomcat7
+
+RUN service tomcat7 start
+
+EXPOSE 3306
+
+# Change default port
+
+#ADD server.xml /tmp/server.xml
+#RUN cp -a /tmp/server.xml /etc/tomcat7/server.xml
+#RUN service tomcat7 restart
+#copy app.war
