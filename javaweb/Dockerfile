@@ -4,10 +4,10 @@ RUN sudo apt-get update
 
 #Install java
 
-RUN apt-get -y install python-software-properties
-RUN add-apt-repository ppa:webupd8team/java
-RUN apt-get -y update
-RUN apt-get -y install oracle-java8-installer
+RUN sudo apt-get -y install python-software-properties
+RUN sudo add-apt-repository ppa:webupd8team/java
+RUN sudo apt-get -y update
+RUN sudo apt-get -y install oracle-java8-installer
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
