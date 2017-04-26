@@ -13,9 +13,9 @@ RUN sudo apt-get -y update
 RUN sudo apt-get -y install oracle-java8-installer
 RUN sudo apt install oracle-java8-set-default
 
-# Define commonly used JAVA_HOME variable
-ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
-ENV PATH=$PATH:$JAVA_HOME/bin
+# Declare JAVA_HOME variable
+RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+RUN export PATH=$PATH:$JAVA_HOME/bin
 
 # Install Tomcat
 
