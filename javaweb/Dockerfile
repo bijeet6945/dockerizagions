@@ -16,8 +16,8 @@ RUN sudo apt install oracle-java8-set-default
 # Declare JAVA_HOME variable
 #RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 #RUN export PATH=$PATH:$JAVA_HOME/bin
-WORKDIR dependancies
-COPY tomcat7 /etc/default/tomcat7
+
+COPY ./dependancies/tomcat7 /etc/default/tomcat7
 
 # Install Tomcat
 
