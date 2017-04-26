@@ -17,12 +17,12 @@ RUN sudo apt install oracle-java8-set-default
 RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 RUN export PATH=$PATH:$JAVA_HOME/bin
 
-COPY ./dependancies/server.xml /etc/tomcat7/server.xml
-COPY ./dependancies/tomcat7 /etc/default/tomcat7
-
 # Install Tomcat
 
 RUN apt-get -y install tomcat7
+
+COPY ./dependancies/server.xml /etc/tomcat7/server.xml
+COPY ./dependancies/tomcat7 /etc/default/tomcat7
 
 RUN service tomcat7 start
 
