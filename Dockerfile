@@ -10,10 +10,6 @@ FROM node:7.5.0-alpine
 
 WORKDIR /src
 
-COPY package.json package.json
-
-RUN npm install
-
 COPY . .
 
 EXPOSE 8081
